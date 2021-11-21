@@ -117,6 +117,12 @@
       }
     });
 
+    // Step 5
+    window.onerror = function(msg, url, line) {
+      console.log("Message: " + msg + "\nURL: " + url + "\nLine: " + line);
+      return true;
+    }
+
     let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
 
     // Start your code here
