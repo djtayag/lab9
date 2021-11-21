@@ -113,15 +113,13 @@
       } catch (err) {
         alert(err.message);
       } finally {
-        console.log("in finally");
+        console.log("in finally branch");
       }
     });
 
-    // Step 5
-    window.onerror = function(msg, url, line) {
-      console.log("Message: " + msg + "\nURL: " + url + "\nLine: " + line);
-      return true;
-    }
+    window.addEventListener('error', () => {
+      console.log("Oops! There's an error you dummy!");
+    });
 
     let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
 
