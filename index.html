@@ -87,7 +87,12 @@
     </section>
   </main>
 
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
+  window.TrackJS && TrackJS.install({ 
+    token: "b9b28464b3d54805b4b5b15252c6aa37"
+  });                   
+                        
     class EmptyFieldError extends Error {
       constructor(message) {
         super(message);
